@@ -58,7 +58,7 @@ jobs:
             # Docker Hub에 로그인
             echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
             # Docker 이미지 풀
-            docker pull ${{ secrets.DOCKER_USER }}/customerservice:latest
+            docker pull ${{ secrets.DOCKER_USER }}/customer_service:latest
             # 기존 컨테이너 중지 및 제거
             docker stop customer_service || true
             docker rm customer_service || true
